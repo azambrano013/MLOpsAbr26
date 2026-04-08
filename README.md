@@ -21,5 +21,5 @@ Sigue estos pasos para replicar el entorno en tu máquina local:
 
 ### 1. Clonar el repositorio
 ```bash
-git clone [https://github.com/ClaraNavia/api-ninos-creativos.git](https://github.com/ClaraNavia/api-ninos-creativos.git)
+git clone [https://github.com/azambrano013/MLOpsAbr26.git](https://github.com/azambrano013/MLOpsAbr26.git)
 cd api-ninos-creativos
