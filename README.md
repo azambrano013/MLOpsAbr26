@@ -79,7 +79,7 @@ Puedes probar la API directamente desde `http://127.0.0.1:8000/docs` o usando un
 
 ## ☁️ Plataforma Cloud usada para el deploy
 
-Para este proyecto se ha seleccionado la plataforma **Render** (o Hugging Face/Railway, según la que hayas elegido finalmente), debido a su facilidad para desplegar aplicaciones de Python y FastAPI mediante contenedores o integración directa con GitHub.
+Para este proyecto se ha seleccionado la plataforma **Render**, debido a su facilidad para desplegar aplicaciones de Python y FastAPI mediante contenedores o integración directa con GitHub.
 
 ---
 
