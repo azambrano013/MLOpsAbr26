@@ -53,6 +53,3 @@ def hacer_prediccion(datos: Cliente):
     resultado = modelo.predict(datos_df)
     
     return {"prediccion": int(resultado[0])}
-
-    
-    return {"prediccion": int(resultado[0])}
