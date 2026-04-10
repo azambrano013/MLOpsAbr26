@@ -1,85 +1,60 @@
-# 🎨 API Niños Creativos - NoExisto.com
+🎨 API Niños Creativos - NoExisto.com
+Esta API proporciona un servicio de predicción basado en un modelo de Regresión Logística (ElasticNet) para optimizar las campañas de marketing de suscripción a revistas.
 
-Esta API proporciona un servicio de predicción basado en un modelo de **Regresión Logística** para optimizar las campañas de marketing de suscripción a revistas para Niños.
+🌐 Acceso Directo (Live Demo)
+La API se encuentra desplegada y operativa en la nube. Puedes probarla sin instalar nada aquí:
 
-## 📝 Descripción del Problema
-El objetivo de este proyecto es ayudar a la empresa **NoExisto.com** a identificar qué clientes potenciales tienen una mayor probabilidad de suscribirse a una revista nueva llamada NINOS CREATIVOS.  
+👉 (https://mlopsabr26-1.onrender.com/docs)
 
-Utilizando datos demográficos y de comportamiento, el modelo de Aprendizaje Supervisado (ElasticNet Logistic Regression) analiza variables como el nivel de ingresos, género, etnia y estado de jubilación para clasificar a los usuarios. Esto permite una estrategia de marketing más inteligente, reduciendo costos de captación y mejorando la relevancia de las ofertas enviadas a los clientes.
+📝 Descripción del Problema
+El objetivo es identificar clientes potenciales con alta probabilidad de suscribirse a la nueva revista Niños Creativos. El modelo analiza variables demográficas (Ingresos, Edad, Hijos, etc.) para clasificar a los usuarios, permitiendo una estrategia de marketing más eficiente y con menores costos de captación para NoExisto.com.
+
+
 
 ---
 
-## 🚀 Instrucciones para correr la API localmente
+🚀 Instrucciones para Ejecución Local
+Si deseas correr el proyecto en tu propia máquina, tienes dos opciones:
 
-Sigue estos pasos para configurar el entorno y ejecutar el servidor en tu computadora:
+Opción A: Con Docker (Recomendado) 🐳
+Tener Docker Desktop abierto.
 
-1. **Clonar el repositorio o situarse en la carpeta:**
-   ```bash
-   cd api-ninos-creativos
-   ```
+Construir la imagen:
+docker build -t api-ninos-creativos .
 
-2. **Crear y activar el entorno virtual:**
-   ```bash
-   # Crear la burbuja (entorno virtual)
-   python -m venv venv
+Correr el contenedor:
+docker run -p 8000:8000 api-ninos-creativos
 
-   # Activar en Windows
-   .\venv\Scripts\activate
-   ```
+Acceder a http://localhost:8000/docs.
 
-3. **Instalar las dependencias:**
-   Asegúrate de tener el archivo `requirements.txt` y ejecuta:
-   ```bash
-   pip install -r requirements.txt
-   ```
+Opción B: Con Entorno Virtual (Python)
+Activar entorno virtual: .\venv\Scripts\activate
 
-4. **Iniciar el servidor con Uvicorn:**
-   ```bash
-   uvicorn main:app --reload
-   ```
-   El servidor estará disponible en: `http://127.0.0.1:8000`
+Instalar dependencias: pip install -r requirements.txt
 
-5. **Importante tener el archivo runtime.txt que estipula que la versión de Python debe ser 3.10 o superior**
-6. **Si deseas usar Docker** 
-## 🐳 Ejecución con Docker
-Si prefieres no configurar el entorno local, puedes usar Docker:
+Ejecutar: uvicorn main:app --reload
 
-1. Construir la imagen:
-   `docker build -t api-ninos-creativos .`
+🛠 Estructura del Request (/predict)
+Para obtener una predicción, envía un JSON con el siguiente formato:
 
-2. Correr el contenedor:
-   `docker run -p 8000:8000 api-ninos-creativos`
----
-
-## 🛠 Ejemplo de Request al endpoint `/predict`
-
-Puedes probar la API directamente desde `http://127.0.0.1:8000/docs` o usando una herramienta como Postman o cURL.
-
-**Cuerpo del JSON (Ejemplo):**
-```json
+JSON
 {
   "Income": 45000,
   "IsFemale": 1,
   "IsRetired": 0,
-  "HasChildren": 1,
-  "Age": 34
+  "Minors": 2,
+  "Own": 1,
+  "PrevChild": 1,
+  "White": 0
 }
-```
+☁️ Infraestructura
+Plataforma Cloud: Render.
 
-**Respuesta esperada:**
-```json
-{
-  "prediction": 1,
-  "probability": 0.85,
-  "message": "El cliente es propenso a suscribirse"
-}
-```
+Despliegue: Automático mediante Dockerfile sincronizado con GitHub.
 
----
+Framework: FastAPI.
 
-## ☁️ Plataforma Cloud usada para el deploy
-
-Para este proyecto se ha seleccionado la plataforma **Render**, debido a su facilidad para desplegar aplicaciones de Python y FastAPI mediante contenedores o integración directa con GitHub.
+Modelo: Scikit-learn (ElasticNet Logistic Regression).integración directa con GitHub.
 
 ---
 
