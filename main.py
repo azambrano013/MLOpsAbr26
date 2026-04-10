@@ -15,7 +15,22 @@ class Cliente(BaseModel):
     White: int
 
 # 2. Inicializamos FastAPI
-app = FastAPI()
+app = FastAPI(
+    title="🚀 API de Predicción - Niños Creativos",
+    description="""
+    Esta API utiliza un modelo de **Regresión Logística (ElasticNet)** para identificar clientes potenciales con alta probabilidad de suscripción a revistas de NoExisto.com.
+    
+    ### Autores:
+    * **Lorena Anavia**
+    * **Alberto Zambrano**
+    """,
+    version="1.0.0",
+    contact={
+        "name": "Equipo de Data Science - MLOPsAbr26 - NoExisto",
+        "url": "http://noexisto.com/soporte",
+        "email": "alberto@ejemplo.com",
+    },
+)
 
 # 3. Cargamos el modelo (Asegúrate de que el nombre del archivo sea el correcto)
 try:
