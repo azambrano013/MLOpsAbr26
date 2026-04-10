@@ -2,23 +2,22 @@ import numpy as np
 import pandas as pd
 import pickle
 from fastapi import FastAPI
-from pydantic import BaseModel  # Importación vital
+from pydantic import BaseModel, Field  # Importación vital
 
 # 1. Definimos el esquema de datos
 class Cliente(BaseModel):
-    Income: float
-    IsFemale: int
-    IsRetired: int
-    Minors: int
-    Own: int
-    PrevChild: int
-    White: int
-
+    Income: float = Field(..., example=45000, description="Ingresos anuales del cliente en USD")
+    IsFemale: int = Field(..., example=1, description="Género: 1 para Mujer, 0 para Hombre")
+    IsRetired: int = Field(..., example=0, description="Estado de jubilación: 1 si está jubilado")
+    Minors: int = Field(..., example=2, description="Número de hijos menores de edad")
+    Own: int = Field(..., example=1, description="Propiedad de vivienda: 1 si es propietario")
+    PrevChild: int = Field(..., example=1, description="Tiene hijos: 1 si es afirmativo")
+    White: int = Field(..., example=0, description="Raza: 1 si es blanco")
 # 2. Inicializamos FastAPI
 app = FastAPI(
     title="🚀 API de Predicción - Niños Creativos",
     description="""
-    Esta API utiliza un modelo de **Regresión Logística (ElasticNet)** para identificar clientes potenciales con alta probabilidad de suscripción a revistas de NoExisto.com.
+    Esta API utiliza un modelo de **Regresión Logística (ElasticNet)** para identificar clientes potenciales con alta probabilidad de suscripción a la nueva revista NINOS CREATIVOS de revistas de NoExisto.com.
     
     ### Autores:
     * **Lorena Anavia**
@@ -28,7 +27,7 @@ app = FastAPI(
     contact={
         "name": "Equipo de Data Science - MLOPsAbr26 - NoExisto",
         "url": "http://noexisto.com/soporte",
-        "email": "alberto@ejemplo.com",
+        "email": "albertojosezambrano@gmail.com",
     },
 )
 
@@ -52,5 +51,8 @@ def hacer_prediccion(datos: Cliente):
     
     # Realizamos la predicción
     resultado = modelo.predict(datos_df)
+    
+    return {"prediccion": int(resultado[0])}
+
     
     return {"prediccion": int(resultado[0])}
