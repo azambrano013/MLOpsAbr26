@@ -40,7 +40,15 @@ Sigue estos pasos para configurar el entorno y ejecutar el servidor en tu comput
    El servidor estará disponible en: `http://127.0.0.1:8000`
 
 5. **Importante tener el archivo runtime.txt que estipula que la versión de Python debe ser 3.10 o superior**
+6. **Si deseas usar Docker** 
+## 🐳 Ejecución con Docker
+Si prefieres no configurar el entorno local, puedes usar Docker:
 
+1. Construir la imagen:
+   `docker build -t api-ninos-creativos .`
+
+2. Correr el contenedor:
+   `docker run -p 8000:8000 api-ninos-creativos`
 ---
 
 ## 🛠 Ejemplo de Request al endpoint `/predict`
