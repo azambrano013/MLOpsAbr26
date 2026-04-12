@@ -64,13 +64,13 @@ Para obtener una predicción, envía un JSON con el siguiente formato:
 ```
 
 # ☁️ Infraestructura
-Plataforma Cloud: Render.
+- **Plataforma Cloud**: Render.
 
-Despliegue: Automático mediante Dockerfile sincronizado con GitHub.
+- **Despliegue**: Automático mediante Dockerfile sincronizado con GitHub.
 
-Framework: FastAPI.
+- **Framework**: FastAPI.
 
-Modelo: Scikit-learn (ElasticNet Logistic Regression).integración directa con GitHub.
+- **Modelo**: Scikit-learn (ElasticNet Logistic Regression).integración directa con GitHub.
 
 ---
 
