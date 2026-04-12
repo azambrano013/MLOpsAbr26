@@ -16,7 +16,7 @@ El objetivo es identificar clientes potenciales con alta probabilidad de suscrib
 # 🚀 Instrucciones para Ejecución Local
 Si deseas correr el proyecto en tu propia máquina, tienes dos opciones:
 
-_Opción A_: Con Docker (Recomendado) 🐳
+*_Opción A_*: Con Docker (Recomendado) 🐳
 Tener Docker Desktop abierto.
 
 Construir la imagen:
@@ -27,7 +27,7 @@ docker run -p 8000:8000 api-ninos-creativos
 
 Acceder a http://localhost:8000/docs.
 
-_Opción B_: Con Entorno Virtual (Python)
+*_Opción B_*: Con Entorno Virtual (Python)
 Activar entorno virtual: .\venv\Scripts\activate
 
 Instalar dependencias: pip install -r requirements.txt
@@ -37,7 +37,7 @@ Ejecutar: uvicorn main:app --reload
 🛠 Estructura del Request (/predict)
 Para obtener una predicción, envía un JSON con el siguiente formato:
 
-JSON
+```JSON
 {
   "Income": 45000, #Ingreso anual en US$
   "IsFemale": 1,
@@ -47,7 +47,9 @@ JSON
   "PrevChild": 1,
   "White": 0
 }
-☁️ Infraestructura
+```
+
+# ☁️ Infraestructura
 Plataforma Cloud: Render.
 
 Despliegue: Automático mediante Dockerfile sincronizado con GitHub.
