@@ -42,9 +42,9 @@ la propensión de suscripción de clientes potenciales a la nueva revista NINOS 
 ## Instrucciones
 1. Haz clic en el botón **POST /predict**.
 2. Presiona **Try it out**.
-3. Ajusta los valores en el JSON de entrada. Según las siguientes instrucciones: 
-    3.1.     Income:        Ingresos anuales del cliente en USD;
-    3.2.     IsFemale:      Género: 1 para Mujer, 0 para Hombre;
+3. Ajusta los valores en el JSON de entrada. Según las siguientes instrucciones. 
+    3.1.     Income:        Ingresos anuales del cliente en USD.
+    3.2.     IsFemale:      Género: 1 para Mujer, 0 para Hombre.
     3.3.     IsRetired:     Estado de jubilación: 1 si está jubilado;
     3.4.     Minors:        Número de hijos menores de edad;
     3.5.     Own:           Propiedad de vivienda: 1 si es propietario;
