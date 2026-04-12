@@ -33,7 +33,10 @@ http://localhost:8000/docs.
 ```
 
 **_Opción B_**: Con Entorno Virtual (Python)
-Activar entorno virtual: .\venv\Scripts\activate
+Activar entorno virtual: 
+```PowerShell
+.\venv\Scripts\activate
+```
 
 Instalar dependencias: 
 
