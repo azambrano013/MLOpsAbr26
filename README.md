@@ -94,7 +94,13 @@ Envía un JSON con el siguiente formato:
 
 Sigue estos pasos para replicar el entorno en tu máquina local:
 
-### 1. Clonar el repositorio
-```bash
-git clone [https://github.com/azambrano013/MLOpsAbr26.git](https://github.com/azambrano013/MLOpsAbr26.git)
-cd api-ninos-creativos
+## 📥 Clonar el repositorio
+
+Clona el proyecto en tu máquina local:
+```batch
+git clone https://github.com/azambrano013/MLOpsAbr26.git
+```
+## 📂 Acceder al directorio
+```batch
+cd MLOpsAbr26
+```
