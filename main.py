@@ -39,10 +39,10 @@ app = FastAPI(
 Esta API utiliza un modelo de **Regresión Logística con regularización ElasticNet** para predecir
 la propensión de suscripción de clientes potenciales a la nueva revista NINOS CREATIVOS para la editorial **NoExisto.com**.
 
-## Instrucciones
-1. Haz clic en el botón **POST /predict**.
+## Instrucciones para hacer predicciones
+1. En la sección SERVICIOS DE INFERENCIAS: Haz clic en el botón **POST /predict**.
 2. Presiona **Try it out**.
-3. Ajusta los valores en el JSON de entrada. Según las siguientes instrucciones. 
+3. Ajusta los valores en el JSON de entrada. **Según las instrucciones detalladas en la sección CLIENTE**. 
 4. Revisa la sección **Response body** para ver el resultado.
 
 ### Equipo de Desarrollo - 19 Abril 2026:
