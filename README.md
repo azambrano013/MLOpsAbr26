@@ -50,6 +50,7 @@ uvicorn main:app --reload
 ```
 # 🛠 Estructura del Request (/predict)
 Para obtener una predicción, indique lo siguiente: 
+  ```JSON
   "Income": 45000; #Ingreso anual en US$
   "IsFemale": 1;   1 si es mujer,
   "IsRetired": 0,  1 si está jubilada
@@ -57,6 +58,7 @@ Para obtener una predicción, indique lo siguiente:
   "Own": 1,        1 si es propietario de su casa
   "PrevChild": 1,  1 si anteriormente ha comprado revistas infantiles,
   "White": 0;      1 si es de etnia blanca.
+```
 
 Envía un JSON con el siguiente formato:
 
