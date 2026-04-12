@@ -39,7 +39,7 @@ Para obtener una predicción, envía un JSON con el siguiente formato:
 
 JSON
 {
-  "Income": 45000,
+  "Income": 45000, #Ingreso anual en US$
   "IsFemale": 1,
   "IsRetired": 0,
   "Minors": 2,
