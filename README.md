@@ -30,8 +30,12 @@ Acceder a http://localhost:8000/docs.
 **_Opción B_**: Con Entorno Virtual (Python)
 Activar entorno virtual: .\venv\Scripts\activate
 
-Instalar dependencias: pip install -r requirements.txt
+Instalar dependencias: 
 
+```batch
+install -r requirements.txt
+
+```
 Ejecutar: uvicorn main:app --reload
 
 # 🛠 Estructura del Request (/predict)
