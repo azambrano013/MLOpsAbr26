@@ -20,12 +20,17 @@ Si deseas correr el proyecto en tu propia máquina, tienes dos opciones:
 Tener Docker Desktop abierto.
 
 Construir la imagen:
+```batch
 docker build -t api-ninos-creativos .
-
+```
 Correr el contenedor:
+```batch
 docker run -p 8000:8000 api-ninos-creativos
-
-Acceder a http://localhost:8000/docs.
+```
+Acceder a:
+```batch
+http://localhost:8000/docs.
+```
 
 **_Opción B_**: Con Entorno Virtual (Python)
 Activar entorno virtual: .\venv\Scripts\activate
