@@ -41,8 +41,10 @@ Instalar dependencias:
 install -r requirements.txt
 
 ```
-Ejecutar: uvicorn main:app --reload
-
+Ejecutar:
+```batch
+uvicorn main:app --reload
+```
 # 🛠 Estructura del Request (/predict)
 Para obtener una predicción, envía un JSON con el siguiente formato:
 
