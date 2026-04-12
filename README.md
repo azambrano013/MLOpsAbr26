@@ -6,7 +6,7 @@ La API se encuentra desplegada y operativa en la nube. Puedes probarla sin insta
 
 ### 👉 (https://mlopsabr26-1.onrender.com/docs)
 
-📝 Descripción del Problema
+## 📝 Descripción del Problema
 El objetivo es identificar clientes potenciales con alta probabilidad de suscribirse a la nueva revista Niños Creativos. El modelo analiza variables demográficas (Ingresos, Edad, Hijos, etc.) para clasificar a los usuarios, permitiendo una estrategia de marketing más eficiente y con menores costos de captación para NoExisto.com.
 
 
