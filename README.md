@@ -60,19 +60,7 @@ Para obtener una predicción, indique lo siguiente:
   "White": 0;      1 si es de etnia blanca.
 ```
 
-Envía un JSON con el siguiente formato:
 
-```JSON
-{
-  "Income": 45000, #Ingreso anual en US$
-  "IsFemale": 1,
-  "IsRetired": 0,
-  "Minors": 2,
-  "Own": 1,
-  "PrevChild": 1,
-  "White": 0
-}
-```
 
 # ☁️ Infraestructura
 - **Plataforma Cloud**: Render.
